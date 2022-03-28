@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reddit Clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body style="background-color: #dee4e6">
+    <header>
+      <div id="headerDiv">
+        <div id="headerLogoAndSearch">
+          <img
+            src="assets\Reddit-Logo.png"
+            alt="redditLogo"
+            id="redditLogo"
+            height="60px"
+          />
+          <img
+            src="assets\pngfind.com-home-icon-png-537224.png"
+            alt="homeLogo"
+            height="20px"
+          />
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Home &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <form class="d-flex" style="width: 600px">
+            <img
+              src="assets\pngfind.com-lupa-png-2773838.png"
+              alt="magGlass"
+              height="20px"
+              id="magGlass"
+              style="margin-top: 0.5%; margin-left: 0.5%"
+            />
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="&nbsp; &nbsp;&nbsp;&nbsp;Search Reddit"
+              aria-label="Search"
+              id="searchBar"
+              style="background-color: #dee7ea; border: 0"
+            />
+          </form>
+          <button style="border: 0; background-color: white">
+            <img src="assets\messaging.png" alt="msgLogo" height="25px" />
+          </button>
+          <button style="border: 0; background-color: white">
+            <img
+              src="assets\185-1850576_png-file-white-bell-notification-icon-transparent-clipart.png"
+              alt="notiBell"
+              height="25px"
+            />
+          </button>
+          <button style="border: 0; background-color: white">
+            <img src="assets\plus-sign-icon-21.jpg" alt="plus" height="25px" />
+          </button>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="assets\48894.png" alt="" height="30px" />
+              &nbsp;&nbsp;RedditUser2022 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="entireContainer">
+      <div id="postContainer">
+        <nav class="navbar navbar-light" id="topNavBar">
+          <div
+            class="container"
+            style="
+              justify-content: flex-start;
+              background-color: white;
+              padding: 10px;
+            "
+          >
+            <img src="assets\48894.png" alt="" width="30" height="30" />
+            <form class="d-flex" style="margin-right: 10px">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Create Post"
+                aria-label="Create Post"
+                id="Create Post"
+                style="
+                  background-color: #dee7ea;
+                  border: 0;
+                  width: 450px;
+                  margin-left: 3%;
+                "
+              />
+            </form>
+            <button style="border: 0; background-color: white">
+              <img
+                src="assets\images-icon-18.jpg"
+                alt="browseImg"
+                height="30"
+              />
+            </button>
+            <button style="border: 0; background-color: white">
+              <img src="assets\Resolve.png" alt="chainLink" height="26" />
+            </button>
+          </div>
+        </nav>
+        <nav class="navbar navbar-light" id="nextNavBar">
+          <div
+            class="container"
+            style="
+              justify-content: flex-start;
+              background-color: white;
+              padding: 10px;
+            "
+          >
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0"
+            >
+              <img
+                src="assets\png-Space-Rocket-Outline-Png-Rocket-Space-Ship-Outline-rocket-icon_thumbnail.png"
+                alt=""
+                width="30"
+                height="30"
+              />
+              Best
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0"
+            >
+              <img
+                src="assets\Juno-Firewall-feature-icons-fire-ratings2.png"
+                alt=""
+                width="50"
+                height="30"
+              />
+              Hot
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0"
+            >
+              <img src="assets\starlogo.png" alt="" width="30" height="30" />
+              New
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0"
+            >
+              <img src="assets\arrowGraph.jpg" alt="" width="30" height="30" />
+              Top
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; margin-right: 60px"
+            >
+              <img src="assets\ellipose.png" alt="" width="30" height="30" />
+            </button>
+
+            <div class="dropdown" style="margin-left: 38px">
+              <img
+                src="assets\square_with_right_half_black_u25E8_icon_256x256.png"
+                alt=""
+                width="30"
+                height="30"
+              />
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="width: 20px"
+              ></button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 250px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/orange0401
+              </p>
+              <p style="color: grey">10 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [Q] Sell Knife Immedietly or Trade to get more profit then sell?
+            </p>
+            <p id="postPara">
+              i have gutknife freehand ft and idk what to do about it since i
+              just won it on a giveaway should i trade it to get profit then
+              sell or sell immedietly to buy other skins?
+            </p>
+          </div>
+        </div>
+
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/PixelArt •Posted byu/kmm625&nbsp;
+              </p>
+              <p style="color: grey">9 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">Gas Station</p>
+            <video width="320" height="240" controls>
+              <source src="assets\videoFile.mp4" type="video/mp4" />
+              <source src="movie.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/Discord_Bots •Posted byu/Toweles
+              </p>
+              <p style="color: grey">33 minutes ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              I need help with this error [JavaScript Help]
+            </p>
+            <p id="postPara">
+              TypeError: Cannot read properties of undefined (reading 'get') 
+              npm start > shinies@1.0.0 start > node . Project is running!
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                Posted byu/WSJ_Official
+              </p>
+              <p style="color: grey">1 month ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Stay informed with the stories that matter most. Subscribe for
+              only $2 per week.
+            </p>
+            <img
+              src="assets\zOYhBZPONCkIqFOr-aW_6qUMey-gvMIjjodccjYBGeE.webp"
+              alt=""
+              height="200px"
+              style="padding: 10px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/Longjumping-Couple73
+              </p>
+              <p style="color: grey">5 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [PC] AK47 Blue Laminate FN (TITAN KATOWICE 2014 STICKER), M4A1-S
+              Bright Water MW (VIRTUS PRO KATOWICE 2014 STICKER)
+            </p>
+            <p id="postPara">
+              AK47 Screenshots There are Cologne 2014 and Katowice 2015 Titan
+              stickers too, all 0% wear. Katowice 2014 is unavailable on steam
+              market and 3k+$ on non-steam markets M4A1-S Screenshots There are
+              Cologne 2014 and Dreamhack 2014 VP stickers too, all 0% wear.
+              Katowice 2014 is 600+ $ on steam market How much for these? Thanks
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/EDCexchange •Posted by1 Exchangeu/s00perg00se
+              </p>
+              <p style="color: grey">43 minutes ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [WTS] EDC Bundle of oddities and a couple knives
+            </p>
+            <p id="postPara">
+              Howdy y’all! I’ve got a random assortment of things up for grabs
+              today! Priced to move! time stamp and album -Samsung Galaxy Tab A
+              8” with case ($110 new) -a knuck/knife (JHO Nug clone) a SwissCard
+              Lite in black -a 10 gram piece of .999 silver -mini android cell
+              phone
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/krusie_gang •Posted byu/IamMrJay
+              </p>
+              <p style="color: grey">4 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Low effort shitpost I made because I just want to feel something.
+            </p>
+            <img
+              src="assets\g6a41muszyp81.webp"
+              alt=""
+              height="200px"
+              style="padding: 5px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/web_design •Posted byu/lumenwrites
+              </p>
+              <p style="color: grey">5 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Is there a place where I can hire an experienced designer to give
+              me feedback on my designs, do a short mentorship session, help me
+              to improve my work?
+            </p>
+            <p id="postPara">
+              Hey guys! I'm an experienced web developer, but a
+              novice/intermediate designer. Currently, I'm looking into building
+              my own web design/development business (as a freelancer or an
+              agency) and getting my first clients. I'm pretty confident in my
+              ability to create simple and basic designs, but I still have a lot
+              to learn when it comes to making them look premium and polished.
+              But I'd really love to be able to offer design as a service I
+              provide for my clients (at a reduced price, and with a money-back
+              guarantee, in case they aren't satisfied with my work). So my idea
+              is that I'd do the best work I can for my clients, and then spend
+              some of the money I get paid to hire a more experienced designer
+              to help me take my work to the next level. I'd be running my work
+              by them, and they'd give me advice and feedback (via text chat or
+              voice calls or whatever is the most convenient for us). That way
+              my clients would receive better quality products, I'd receive
+              design mentorship, and the experienced designer would get paid for
+              a relatively low amount of work (since I'd be doing all the
+              designs, they'd just provide advice/feedback/guidance). Where can
+              I find people interested in this kind of deal? Ideally for
+              relatively low prices (under $40 for 1 hour of feedback and
+              advice), which can grow if my projects are successful and budgets
+              begin to grow. Is there something like CodeMentor, but for
+              designers? Do you know anyone who would be interested in this?
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/psychology •Posted byu/pssyched
+              </p>
+              <p style="color: grey">2 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              The children’s mental health crisis didn’t start with the pandemic
+            </p>
+            <p id="postPara"></p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/ProgrammerHumor •Posted byu/Deep-Ad591
+              </p>
+              <p style="color: grey">6 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              After every scrum meeting Meme
+            </p>
+            <img
+              src="assets\m63ph6fgiyp81.webp"
+              alt=""
+              height="400px"
+              style="padding: 5px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                Posted byu/DPS_Games
+              </p>
+              <p style="color: grey">5 days ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Playtesters wanted! We’re a new studio making a new sci-fi
+              shooter, and we’re running tests over the next few weeks (more
+              info in comments)
+            </p>
+            <p id="postPara"></p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/djent_t
+              </p>
+              <p style="color: grey">4 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [H] #9 StatTrak™ Karambit | SAPPHIRE / 0.00797877 [W] $10.300
+              buff.163(IN ITEMS) Trade
+            </p>
+            <p id="postPara">
+              TOP #9 WORLD SAPPHIRE(according to csgofloat.com): THE LINK LEADS
+              TO THE CSGO FLOAT PAGE WITH ACTUAL TOP OF StatTrak Karambit |
+              Sapphires B/O $10.300 buff163($12k of items using buff prices;
+              NEGOTIABLE) Screenshot: SCREENSHOT LINK In-game screenshot:
+              SCREENSHOT LINK Steam trade-link:
+              https://steamcommunity.com/tradeoffer/new/?partner=143705906&token=cT450OVo
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/orange0401
+              </p>
+              <p style="color: grey">10 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [Q] Sell Knife Immedietly or Trade to get more profit then sell?
+            </p>
+            <p id="postPara">
+              i have gutknife freehand ft and idk what to do about it since i
+              just won it on a giveaway should i trade it to get profit then
+              sell or sell immedietly to buy other skins?
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/indiegameswap •Posted byu/penguin6245
+              </p>
+              <p style="color: grey">1 hour ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [H] 5 of my games [W] Metro Redux Bundle (5:1)
+            </p>
+            <p id="postPara">
+              Looking to trade 5 of my games for Metro Redux Bundle, Metro 2033
+              Redux and Metro Last Light Redux. I have: Desert Child Aegis
+              Defenders X-Morph: Defense Between the Stars The Walking Dead: 400
+              Days Cursed Castilla (Maldita Castilla EX)
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/wiimmfi •Posted byu/UnderDogC626
+              </p>
+              <p style="color: grey">7 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">Uhh YuGiOh anyone?</p>
+            <p id="postPara">
+              I know I've asked this before but i was wondering if anyone was
+              able to play the YuGiOh ds games online with me. It's sadly so
+              rare to find anyone that does compared to Pokemon. I have all of
+              the games and I am sure most of them work on wiimmfi
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/MouseMarket •Posted byu/nayrbear
+              </p>
+              <p style="color: grey">4 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [US-KY] [H] Finalmouse S12 Phantom M, EGG XM1R, Glorious MOW [W]
+              Paypal S
+            </p>
+            <p id="postPara">
+              https://imgur.com/a/y6vGCul ello everyone, got a few mousers for
+              sale today FM S12 Phantom M: extremely lightly used, maybe 4-5
+              hours, scrollwheel is slightly off center but no issues when
+              using, has corepads installed, will come with one partial set, and
+              two full sets of corepads. Original box and whatnot. $225 shipped
+              obo
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/funny •Posted byu/iammesutkaya
+              </p>
+              <p style="color: grey">5 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">Gordon Ramsay</p>
+            <img
+              src="assets\w71vwy5esyp81.webp"
+              alt=""
+              height="400px"
+              style="padding: 5px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/PixelArt •Posted byu/kmm625
+              </p>
+              <p style="color: grey">9 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">Gas Station</p>
+            <video width="320" height="240" controls>
+              <source src="assets\videoFile.mp4" type="video/mp4" />
+              <source src="movie.ogg" type="video/ogg" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/krusie_gang •Posted byu/IamMrJay
+              </p>
+              <p style="color: grey">4 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Low effort shitpost I made because I just want to feel something.
+            </p>
+            <img
+              src="assets\g6a41muszyp81.webp"
+              alt=""
+              height="200px"
+              style="padding: 5px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/EDCexchange •Posted by1 Exchangeu/s00perg00se
+              </p>
+              <p style="color: grey">43 minutes ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [WTS] EDC Bundle of oddities and a couple knives
+            </p>
+            <p id="postPara">
+              Howdy y’all! I’ve got a random assortment of things up for grabs
+              today! Priced to move! time stamp and album -Samsung Galaxy Tab A
+              8” with case ($110 new) -a knuck/knife (JHO Nug clone) a SwissCard
+              Lite in black -a 10 gram piece of .999 silver -mini android cell
+              phone
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/Longjumping-Couple73
+              </p>
+              <p style="color: grey">5 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [PC] AK47 Blue Laminate FN (TITAN KATOWICE 2014 STICKER), M4A1-S
+              Bright Water MW (VIRTUS PRO KATOWICE 2014 STICKER)
+            </p>
+            <p id="postPara">
+              AK47 Screenshots There are Cologne 2014 and Katowice 2015 Titan
+              stickers too, all 0% wear. Katowice 2014 is unavailable on steam
+              market and 3k+$ on non-steam markets M4A1-S Screenshots There are
+              Cologne 2014 and Dreamhack 2014 VP stickers too, all 0% wear.
+              Katowice 2014 is 600+ $ on steam market How much for these? Thanks
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/indiegameswap •Posted byu/penguin6245
+              </p>
+              <p style="color: grey">1 hour ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [H] 5 of my games [W] Metro Redux Bundle (5:1)
+            </p>
+            <p id="postPara">
+              Looking to trade 5 of my games for Metro Redux Bundle, Metro 2033
+              Redux and Metro Last Light Redux. I have: Desert Child Aegis
+              Defenders X-Morph: Defense Between the Stars The Walking Dead: 400
+              Days Cursed Castilla (Maldita Castilla EX)
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/web_design •Posted byu/lumenwrites
+              </p>
+              <p style="color: grey">5 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              Is there a place where I can hire an experienced designer to give
+              me feedback on my designs, do a short mentorship session, help me
+              to improve my work?
+            </p>
+            <p id="postPara">
+              Hey guys! I'm an experienced web developer, but a
+              novice/intermediate designer. Currently, I'm looking into building
+              my own web design/development business (as a freelancer or an
+              agency) and getting my first clients. I'm pretty confident in my
+              ability to create simple and basic designs, but I still have a lot
+              to learn when it comes to making them look premium and polished.
+              But I'd really love to be able to offer design as a service I
+              provide for my clients (at a reduced price, and with a money-back
+              guarantee, in case they aren't satisfied with my work). So my idea
+              is that I'd do the best work I can for my clients, and then spend
+              some of the money I get paid to hire a more experienced designer
+              to help me take my work to the next level. I'd be running my work
+              by them, and they'd give me advice and feedback (via text chat or
+              voice calls or whatever is the most convenient for us). That way
+              my clients would receive better quality products, I'd receive
+              design mentorship, and the experienced designer would get paid for
+              a relatively low amount of work (since I'd be doing all the
+              designs, they'd just provide advice/feedback/guidance). Where can
+              I find people interested in this kind of deal? Ideally for
+              relatively low prices (under $40 for 1 hour of feedback and
+              advice), which can grow if my projects are successful and budgets
+              begin to grow. Is there something like CodeMentor, but for
+              designers? Do you know anyone who would be interested in this?
+            </p>
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/ProgrammerHumor •Posted byu/Deep-Ad591
+              </p>
+              <p style="color: grey">6 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              After every scrum meeting Meme
+            </p>
+            <img
+              src="assets\m63ph6fgiyp81.webp"
+              alt=""
+              height="400px"
+              style="padding: 5px"
+            />
+          </div>
+        </div>
+        <!-- POSTS -->
+        <div id="post" style="margin-top: 20px">
+          <div id="arrows">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="upArrow"
+            >
+              ▲
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              style="border: 0; background-color: white"
+              id="downArrow"
+            >
+              ▼
+            </button>
+          </div>
+          <div id="postContent" style="margin-left: 40px">
+            <div style="display: flex">
+              <img
+                src="assets\48894.png"
+                alt=""
+                width="20"
+                height="20"
+                style="margin-right: 5px"
+              />
+              <p id="postThread" style="font-weight: bold">
+                r/GlobalOffensiveTrade •Posted byu/orange0401
+              </p>
+              <p style="color: grey">10 hours ago</p>
+            </div>
+            <p id="postHeader" style="font-size: larger">
+              [Q] Sell Knife Immedietly or Trade to get more profit then sell?
+            </p>
+            <p id="postPara">
+              i have gutknife freehand ft and idk what to do about it since i
+              just won it on a giveaway should i trade it to get profit then
+              sell or sell immedietly to buy other skins?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const button = document.getElementById("upArrow");
+        const button2 = document.getElementById("downArrow");
+        button.addEventListener("click", () => {
+          button.style.color = "orange";
+        });
+        button2.addEventListener("click", () => {
+          button2.style.color = "orange";
+        });
+      </script>
+
+      <div id="rightColumnContainer">
+        <figure class="figure">
+          <p
+            style="
+              position: absolute;
+              color: white;
+              font-weight: bold;
+              margin-top: 95px;
+              margin-left: 3px;
+            "
+          >
+            Top Sports Communities
+          </p>
+          <img
+            src="assets\360_F_441018196_XsA3yhjHkgnM3JOIb5RS4TiqQSH2ZzYe.jpg"
+            class="figure-img img-fluid rounded"
+            alt="..."
+            width="200px"
+          />
+          <div style="display: flex; margin-left: 5px">
+            <p style="margin-right: 10px">1</p>
+            <p style="margin-right: 10px; color: forestgreen">^</p>
+            <img
+              src="assets\48894.png"
+              alt=""
+              height="25px"
+              style="margin-right: 10px"
+            />
+            <p style="font-weight: bold; margin-right: 10px">r/MMA</p>
+            <button
+              class="btn btn-primary btn-sm"
+              type="submit"
+              style="padding: 0; height: 25px"
+            >
+              Join
+            </button>
+          </div>
+          <div style="display: flex; margin-left: 5px">
+            <p style="margin-right: 10px">2</p>
+            <p style="margin-right: 10px; color: forestgreen">^</p>
+            <img
+              src="assets\48894.png"
+              alt=""
+              height="25px"
+              style="margin-right: 10px"
+            />
+            <p style="font-weight: bold; margin-right: 10px">r/formula1</p>
+            <button
+              class="btn btn-primary btn-sm"
+              type="submit"
+              style="padding: 0; height: 25px"
+            >
+              Join
+            </button>
+          </div>
+          <div style="display: flex; margin-left: 5px">
+            <p style="margin-right: 10px">3</p>
+            <p style="margin-right: 10px; color: forestgreen">^</p>
+            <img
+              src="assets\48894.png"
+              alt=""
+              height="25px"
+              style="margin-right: 10px"
+            />
+            <p style="font-weight: bold; margin-right: 10px">r/tennis</p>
+            <button
+              class="btn btn-primary btn-sm"
+              type="submit"
+              style="padding: 0; height: 25px"
+            >
+              Join
+            </button>
+          </div>
+          <div style="display: flex; margin-left: 5px">
+            <p style="margin-right: 10px">4</p>
+            <p style="margin-right: 10px; color: forestgreen">^</p>
+            <img
+              src="assets\48894.png"
+              alt=""
+              height="25px"
+              style="margin-right: 10px"
+            />
+            <p style="font-weight: bold; margin-right: 10px">r/Boxing</p>
+            <button
+              class="btn btn-primary btn-sm"
+              type="submit"
+              style="padding: 0; height: 25px"
+            >
+              Join
+            </button>
+          </div>
+          <div style="display: flex; margin-left: 5px">
+            <p style="margin-right: 10px">5</p>
+            <p style="margin-right: 10px; color: forestgreen">^</p>
+            <img
+              src="assets\48894.png"
+              alt=""
+              height="25px"
+              style="margin-right: 10px"
+            />
+            <p style="font-weight: bold; margin-right: 10px">r/coys</p>
+            <button
+              class="btn btn-primary btn-sm"
+              type="submit"
+              style="padding: 0; height: 25px"
+            >
+              Join
+            </button>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary btn-md"
+            style="margin-left: 60px; margin-bottom: 10px"
+          >
+            View All
+          </button>
+        </figure>
+        <figure class="figure2">
+          <p style="color: grey; font-size: smaller; margin-bottom: 0">
+            ADVERTISEMENT
+          </p>
+          <img
+            src="assets\f77ivGCOZg0nfXAK0wjgJ9NEGgOrvHX2VIJ6rvMme4E.webp"
+            alt=""
+            height="400px"
+          />
+        </figure>
+
+        <figure class="figure3">
+          <p
+            style="
+              font-size: smaller;
+              margin-bottom: 0;
+              font-weight: bold;
+              margin-left: 2%;
+            "
+          >
+            Reddit Premium
+          </p>
+          <p style="margin-left: 2%">
+            The best Reddit experience, with monthly Coins
+          </p>
+          <button
+            type="button"
+            id="tryNowButton"
+            class="btn btn-primary btn-md"
+          >
+            Try Now
+          </button>
+        </figure>
+
+        <figure class="figure4">
+          <div id="aboutContainer">
+            <div id="col1">
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Help
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Reddit Coins
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Reddit Premium
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Communities
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Rereddit
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Topics
+              </button>
+            </div>
+            <div id="col2">
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                About
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Careers
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Press
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Advertise
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Blog
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Terms
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Content Policy
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Privacy Policy
+              </button>
+              <button
+                style="
+                  border: 0;
+                  background-color: white;
+                  text-align: left;
+                  font-size: smaller;
+                "
+              >
+                Mod Policy
+              </button>
+            </div>
+          </div>
+          <br />
+          <p style="font-size: smaller; margin-left: 2%">
+            Reddit Inc © 2022. All rights reserved
+          </p>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>

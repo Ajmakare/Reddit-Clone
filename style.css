@@ -1,0 +1,159 @@
+header {
+  background-color: white;
+  flex: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 80;
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+
+#headerDiv {
+  align-items: center;
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+#headerLogoAndSearch {
+  align-items: center;
+  display: inline-flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+#redditLogo {
+  margin-right: 5%;
+}
+#dropdownMenuButton1 {
+  color: black;
+  background-color: white;
+  border: 0;
+  width: 300px;
+}
+
+#magGlass {
+  position: absolute;
+}
+
+#topNavBar {
+  position: absolute;
+  min-height: 225px;
+  width: 600px;
+  justify-content: space-evenly;
+}
+
+#nextNavBar {
+  position: absolute;
+  min-height: 400px;
+  width: 600px;
+}
+
+#arrows {
+  display: flex;
+  flex-direction: column;
+  width: 2%;
+  margin-right: 20px;
+  position: absolute;
+}
+
+#upArrow:hover,
+#downArrow:hover {
+  color: orange;
+}
+
+#post {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  margin-bottom: 0;
+  margin-right: 0;
+  width: 600px;
+  background-color: white;
+}
+
+#postContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+  margin-left: 20%;
+}
+
+#postHeader {
+  font-weight: bold;
+}
+
+#entireContainer {
+  display: flex;
+}
+
+#rightColumnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.figure {
+  position: absolute;
+  background-color: white;
+  margin-top: 85px;
+  margin-bottom: 20px;
+  min-height: 350px;
+}
+
+.figure2 {
+  position: absolute;
+  background-color: white;
+  margin-top: 480px;
+  margin-bottom: 20px;
+  min-height: 350px;
+}
+
+.figure3 {
+  position: absolute;
+  background-color: white;
+  margin-top: 920px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  width: 200px;
+}
+
+.figure4 {
+  position: absolute;
+  background-color: white;
+  margin-top: 1070px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  width: 200px;
+}
+
+#aboutContainer {
+  display: flex;
+}
+
+#col1,
+#col2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.figureCaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tryNowButton {
+  margin-left: 60px;
+  margin-bottom: 10px;
+  width: 75%;
+  margin-left: 12%;
+  background-color: #f15c33;
+  border-color: transparent;
+}
