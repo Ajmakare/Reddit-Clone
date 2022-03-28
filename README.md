@@ -1,5 +1,5 @@
 # Reddit-Clone
-Reddit responsive UI clone purely using Bootstrap 5 and CSS with 25 hard coded posts using random google image for the assets (tried to get as close as possible to Reddit's assets). Overall, a simplified version of Reddit's UI.
+Reddit responsive UI clone purely using Bootstrap 5 and CSS with 25 hard coded posts using random google images for the assets (tried to get as close as possible to Reddit's assets). Overall, a simplified version of Reddit's UI.
 
 This was mainly just to practice UI as the page does not have any functionality besides a basic inline script for the up and down vote arrows. Code quality was not my focus here as I only spent a few days on this clone.  
 
